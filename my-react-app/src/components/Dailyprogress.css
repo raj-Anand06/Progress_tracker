@@ -1,0 +1,157 @@
+/* Add gradient background to the body */
+body {
+    background: linear-gradient(60deg, #ce9729, #e7e6e8); /* Gradient colors */
+    margin: 0;
+    padding: 0;
+    height: 120vh;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling for the container */
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight opacity */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input container styling */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* Styling for input fields */
+.input-container input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    white-space: 2em;
+    border: 1px solid #ccc;
+    width: 30%;
+    transition: all 0.3s ease;
+}
+
+.input-container input:focus {
+    border-color: #e29333; /* Highlight input borders on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(226, 147, 51, 0.7); /* Subtle glow effect */
+}
+
+/* Button styling */
+.input-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #e29333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 48%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.input-container button:hover {
+    background-color: #e27e1b;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.input-container button:active {
+    background-color: #d77614;
+    transform: scale(1); /* Shrink to normal on click */
+}
+
+/* Styling for the chart container */
+.chart-container {
+    margin-top: 40px;
+    font-size: large;
+    width: 100%;
+}
+
+/* Data List section (displaying added data) */
+.data-list {
+    width: 100%;
+    margin-top: 30px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.data-list-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px; /* Adds spacing between each data entry */
+    padding-bottom: 10px; /* Space at the bottom for scroll */
+}
+
+.data-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    min-width: 150px; /* Set a minimum width for each data entry */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.data-entry span {
+    margin-right: 10px;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+.delete-button:active {
+    background-color: #c62828;
+}
+
+/* Responsive Design for Mobile View */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .input-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-container input,
+    .input-container button {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .data-entry {
+        font-size: 0.9rem;
+    }
+}
